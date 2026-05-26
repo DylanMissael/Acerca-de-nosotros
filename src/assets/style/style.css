@@ -23,6 +23,7 @@ body {
     color: var(--swaply-ink);
     background: var(--swaply-bg);
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow-x: hidden;
 }
 
 img {
@@ -33,6 +34,10 @@ img {
     background: rgba(255, 255, 255, 0.94);
     border-bottom: 1px solid var(--swaply-line);
     backdrop-filter: blur(12px);
+}
+
+.navbar-collapse {
+    padding: 0.65rem 0;
 }
 
 .brand-logo {
@@ -148,10 +153,11 @@ p {
 
 h1 {
     color: var(--swaply-navy);
-    font-size: clamp(3rem, 9vw, 6.25rem);
+    font-size: clamp(2.75rem, 8vw, 6.25rem);
     font-weight: 900;
     line-height: 0.95;
     margin-bottom: 1.5rem;
+    overflow-wrap: anywhere;
 }
 
 h2 {
@@ -414,12 +420,19 @@ h2 {
 .developer-card {
     display: grid;
     height: 100%;
+    min-width: 0;
     gap: 1.5rem;
     padding: clamp(1.6rem, 3vw, 2.25rem);
     background: var(--swaply-white);
     border: 1px solid var(--swaply-line);
     border-radius: 8px;
     box-shadow: 0 24px 60px rgba(7, 17, 63, 0.06);
+}
+
+.developers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.5rem;
 }
 
 .developer-avatar {
@@ -432,6 +445,14 @@ h2 {
     font-weight: 900;
     background: linear-gradient(135deg, var(--swaply-red), var(--swaply-violet) 55%, var(--swaply-blue));
     border-radius: 8px;
+    overflow: hidden;
+}
+
+.developer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
 }
 
 .developer-card h2 {
@@ -443,6 +464,11 @@ h2 {
     color: var(--swaply-muted);
     line-height: 1.8;
     margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+.developer-card a {
+    align-self: end;
 }
 
 .site-footer {
@@ -458,6 +484,15 @@ h2 {
         margin-top: 0.6rem;
     }
 
+    .navbar-nav {
+        gap: 0.25rem;
+        padding-top: 0.8rem;
+    }
+
+    .nav-link {
+        padding: 0.7rem 0;
+    }
+
     .hero-section {
         min-height: auto;
     }
@@ -469,5 +504,72 @@ h2 {
 
     .values-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section,
+    .developers-hero {
+        padding: 6.5rem 0 4rem;
+    }
+
+    h1 {
+        font-size: clamp(2.35rem, 12vw, 3.8rem);
+        line-height: 1.02;
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 9vw, 2.7rem);
+        line-height: 1.08;
+    }
+
+    .hero-copy,
+    .section-lead {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .logo-showcase,
+    .developers-hero .value-summary {
+        min-height: auto;
+    }
+
+    .content-band {
+        padding: 4.25rem 0;
+    }
+
+    .profile-link-card {
+        min-height: 130px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .brand-logo {
+        width: 132px;
+        height: 42px;
+    }
+
+    .btn-swaply-primary,
+    .btn-swaply-outline {
+        width: 100%;
+        padding: 0.85rem 1rem;
+    }
+
+    .info-card,
+    .palette-card,
+    .target-card,
+    .statement-card,
+    .model-card,
+    .value-summary,
+    .developer-card {
+        padding: 1.25rem;
+    }
+
+    .developers-hero h1 {
+        font-size: clamp(2.25rem, 13vw, 3.2rem);
+    }
+
+    .value-pill {
+        min-height: auto;
     }
 }
