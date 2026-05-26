@@ -48,6 +48,9 @@ img {
 }
 
 .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     color: var(--swaply-navy);
     font-weight: 700;
 }
@@ -59,6 +62,10 @@ img {
 
 .btn-swaply-primary,
 .btn-swaply-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     border-radius: 999px;
     font-weight: 800;
     padding: 0.9rem 1.35rem;
@@ -211,6 +218,38 @@ h2 {
     font-size: 1.15rem;
     font-weight: 900;
     margin: 1.35rem 0 0.75rem;
+}
+
+.card-icon,
+.statement-icon {
+    display: inline-grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 1.35rem;
+    background: rgba(7, 17, 63, 0.05);
+}
+
+.card-icon.red,
+.statement-icon {
+    color: var(--swaply-red);
+}
+
+.card-icon.violet {
+    color: var(--swaply-violet);
+}
+
+.card-icon.blue {
+    color: var(--swaply-blue);
+}
+
+.card-icon.navy {
+    color: var(--swaply-navy);
+}
+
+.statement-icon {
+    margin-bottom: 1rem;
 }
 
 .info-card p,
@@ -370,6 +409,12 @@ h2 {
     background: var(--swaply-white);
     border: 1px solid var(--swaply-line);
     border-radius: 8px;
+}
+
+.value-pill > i {
+    color: var(--swaply-red);
+    font-size: 1.35rem;
+    margin-bottom: 0.15rem;
 }
 
 .value-pill strong {
@@ -538,9 +583,13 @@ h2 {
         padding: 4.25rem 0;
     }
 
-    .profile-link-card {
+.profile-link-card {
         min-height: 130px;
     }
+}
+
+.profile-link-card > i {
+    font-size: 1.7rem;
 }
 
 @media (max-width: 575.98px) {
