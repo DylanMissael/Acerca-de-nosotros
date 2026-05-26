@@ -54,7 +54,7 @@ body {
     border-radius: 999px;
     background: var(--swaply-white);
     font-weight: 800;
-    padding: 0.78rem 1.15rem;
+    padding: 0.9rem 1.35rem;
 }
 
 .btn-swaply-outline:hover,
@@ -64,7 +64,7 @@ body {
 }
 
 .profile-hero {
-    padding: 8rem 0 4rem;
+    padding: 8.5rem 0 5.5rem;
     background:
         radial-gradient(circle at 14% 20%, rgba(255, 23, 72, 0.12), transparent 26%),
         radial-gradient(circle at 88% 28%, rgba(122, 46, 230, 0.12), transparent 25%),
@@ -89,7 +89,7 @@ body {
     font-size: 0.78rem;
     font-weight: 900;
     letter-spacing: 0;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
@@ -105,7 +105,7 @@ h1 {
     font-size: clamp(2.8rem, 8vw, 5.5rem);
     font-weight: 900;
     line-height: 0.98;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -113,12 +113,14 @@ h2 {
     font-size: clamp(1.35rem, 3vw, 2.4rem);
     font-weight: 900;
     line-height: 1.08;
+    margin-bottom: 1.25rem;
 }
 
 .hero-copy {
     color: var(--swaply-muted);
     font-size: clamp(1.05rem, 2vw, 1.25rem);
-    line-height: 1.7;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
 }
 
 .profile-chip {
@@ -126,12 +128,12 @@ h2 {
     background: var(--swaply-white);
     border: 1px solid var(--swaply-line);
     border-radius: 999px;
-    padding: 0.6rem 0.9rem;
+    padding: 0.72rem 1rem;
     font-weight: 800;
 }
 
 .content-band {
-    padding: clamp(4rem, 8vw, 6.5rem) 0;
+    padding: clamp(5rem, 9vw, 8rem) 0;
 }
 
 .profile-card {
@@ -139,24 +141,28 @@ h2 {
     background: var(--swaply-white);
     border: 1px solid var(--swaply-line);
     border-radius: 8px;
-    padding: 1.25rem;
+    padding: clamp(1.6rem, 3vw, 2.25rem);
 }
 
 .profile-card h2 {
     font-size: 1.3rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 1.15rem;
 }
 
 .profile-card p,
 .profile-card li,
 .timeline-item p {
     color: var(--swaply-muted);
-    line-height: 1.65;
+    line-height: 1.85;
 }
 
 .profile-card ul {
-    padding-left: 1.1rem;
+    padding-left: 1.35rem;
     margin-bottom: 0;
+}
+
+.profile-card li + li {
+    margin-top: 0.5rem;
 }
 
 .contribution-band {
@@ -166,14 +172,14 @@ h2 {
 
 .timeline {
     display: grid;
-    gap: 1rem;
+    gap: 1.35rem;
 }
 
 .timeline-item {
     display: grid;
     grid-template-columns: 18px 1fr;
-    gap: 1rem;
-    padding: 1.25rem;
+    gap: 1.25rem;
+    padding: clamp(1.5rem, 3vw, 2rem);
     border: 1px solid var(--swaply-line);
     border-radius: 8px;
     background: #ffffff;
@@ -191,7 +197,7 @@ h2 {
     color: var(--swaply-navy);
     font-size: 1.1rem;
     font-weight: 900;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.75rem;
 }
 
 .timeline-item p {
@@ -213,5 +219,9 @@ h2 {
 
     .avatar-placeholder {
         width: min(100%, 260px);
+    }
+
+    .profile-hero {
+        padding: 7rem 0 4.5rem;
     }
 }
