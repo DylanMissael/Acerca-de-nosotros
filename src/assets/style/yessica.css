@@ -1,0 +1,346 @@
+:root {
+    --primary: #8b5cf6;
+    --secondary: #ec4899;
+    --dark: #111827;
+    --light: #f9fafb;
+    --glass: rgba(255, 255, 255, 0.12);
+    --border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background:
+        radial-gradient(circle at top left, #9255a3 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #a322ce 0%, transparent 35%),
+        #0f172a;
+    color: var(--light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.swaply-navbar {
+    background: rgba(42, 15, 40, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(192, 10, 110, 0.08);
+    padding: 12px 0;
+}
+
+.brand-logo {
+    height: 50px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #fc84e6 !important;
+}
+
+.btn-swaply-outline {
+    border: 1px solid #fc84f6;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-swaply-outline:hover {
+    background: #fc84be;
+    color: #111827;
+}
+
+/* HERO */
+
+.profile-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 80px;
+}
+
+.eyebrow {
+    color: #fc84f4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.profile-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #fc84f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-copy {
+    color: #d1d5db;
+    margin-bottom: 25px;
+}
+
+/* FOTO */
+
+.avatar-placeholder {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 40px;
+    background: linear-gradient(
+        135deg,
+        rgba(226, 132, 252, 0.5),
+        rgba(213, 25, 154, 0.4)
+    );
+    overflow: hidden;
+    box-shadow:
+        0 0 40px rgba(192,132,252,0.3),
+        0 0 80px rgba(236,72,153,0.15);
+}
+
+.avatar-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: inherit;
+    filter: blur(40px);
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.avatar-placeholder img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* CHIPS */
+
+.profile-chip {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* ICONOS TECNOLOGÍAS */
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.skill-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(192,132,252,0.08);
+}
+
+.skill-icon:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 0 25px rgba(192,132,252,0.35);
+}
+
+.html-icon {
+    color: #e794c7;
+}
+
+.css-icon {
+    color: #e42685;
+}
+
+.js-icon {
+    color: #2f90b3;
+}
+
+.bootstrap-icon {
+    color: #bb86fc;
+}
+
+.git-icon {
+    color: #9843af;
+}
+
+.github-icon {
+    color: #525fd8;
+}
+
+/* SECCIONES */
+
+.content-band {
+    padding: 90px 0;
+}
+
+/* CARDS */
+
+.profile-card {
+    position: relative;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    border-radius: 28px;
+    padding: 35px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    height: 100%;
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.25),
+        0 0 25px rgba(192,132,252,0.08);
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(
+        135deg,
+        rgba(192,132,252,0.35),
+        rgba(236,72,153,0.25)
+    );
+    filter: blur(35px);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.profile-card:hover::before {
+    opacity: 1;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(192,132,252,0.4);
+}
+
+.profile-card h2 {
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.profile-card p,
+.profile-card li,
+.profile-card a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.profile-card a:hover {
+    color: #c084fc;
+}
+
+.profile-card ul {
+    padding-left: 18px;
+}
+
+/*ICONOS DE CONTACTO*/
+
+.profile-card p i {
+    color: #a96c9d;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #c084fc, #ec4899);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 18px;
+}
+
+.timeline-item span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c084fc, #ec4899);
+    margin-top: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(192,132,252,0.8);
+}
+
+.timeline-item h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: #d1d5db;
+}
+
+
+.site-footer {
+    padding: 30px 0;
+    background: rgba(255,255,255,0.04);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #9ca3af;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .profile-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .profile-hero {
+        text-align: center;
+    }
+
+    .avatar-placeholder {
+        max-width: 250px;
+    }
+
+    .skills-icons {
+        justify-content: center;
+    }
+
+    .timeline {
+        padding-left: 15px;
+    }
+}
