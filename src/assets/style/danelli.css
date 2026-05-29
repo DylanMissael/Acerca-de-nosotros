@@ -1,12 +1,12 @@
 :root {
-    --swaply-red: #ff1748;
-    --swaply-violet: pink;
-    --swaply-blue: #2f55d4;
-    --swaply-navy: #07113f;
-    --swaply-ink: #14172f;
-    --swaply-muted: #62677f;
-    --swaply-line: #e8eaf4;
-    --swaply-bg: #f8f9fd;
+    --swaply-red: #d946ef; /* Rosa Orquídea vibrante (para iconos y destaques) */
+    --swaply-violet: #a855f7; /* Lila Eléctrico premium */
+    --swaply-blue: #06b6d4; /* Turquesa / Cian pop */
+    --swaply-navy: #1e1b4b; /* Azul índigo ultra oscuro (reemplaza al negro aburrido) */
+    --swaply-ink: #312e81; /* Índigo intermedio para textos principales */
+    --swaply-muted: #6366f1; /* Lavanda/Azul atenuado para textos secundarios */
+    --swaply-line: #fae8ff; /* Línea rosa lila muy sutil */
+    --swaply-bg: #fdf4ff; /* Fondo con un toque sutil de blush lila, ultra limpio */
     --swaply-white: #ffffff;
 }
 
@@ -62,7 +62,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     color: var(--swaply-navy);
-    border: 1px solid rgba(7, 17, 63, 0.18);
+    border: 2px solid var(--swaply-navy);
     border-radius: 999px;
     background: var(--swaply-white);
     font-weight: 800;
@@ -71,15 +71,16 @@ body {
 
 .btn-swaply-outline:hover,
 .btn-swaply-outline:focus {
-    color: var(--swaply-red);
-    border-color: rgba(255, 23, 72, 0.34);
+    color: var(--swaply-white);
+    background: var(--swaply-navy);
+    border-color: var(--swaply-navy);
 }
 
 .profile-hero {
     padding: 8.5rem 0 5.5rem;
     background:
-        radial-gradient(circle at 14% 20%, rgba(255, 23, 72, 0.12), transparent 26%),
-        radial-gradient(circle at 88% 28%, rgba(122, 46, 230, 0.12), transparent 25%),
+        radial-gradient(circle at 14% 20%, rgba(217, 70, 239, 0.12), transparent 26%),
+        radial-gradient(circle at 88% 28%, rgba(6, 182, 212, 0.12), transparent 25%),
         linear-gradient(180deg, #ffffff 0%, var(--swaply-bg) 100%);
 }
 
@@ -92,8 +93,8 @@ body {
     font-size: clamp(5rem, 16vw, 9rem);
     font-weight: 900;
     background: linear-gradient(135deg, var(--swaply-red), var(--swaply-violet) 55%, var(--swaply-blue));
-    border-radius: 8px;
-    box-shadow: 0 30px 70px rgba(47, 85, 212, 0.18);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(217, 70, 239, 0.2);
     overflow: hidden;
 }
 
@@ -105,10 +106,10 @@ body {
 }
 
 .eyebrow {
-    color: var(--swaply-red);
+    color: var(--swaply-violet);
     font-size: 0.78rem;
     font-weight: 900;
-    letter-spacing: 0;
+    letter-spacing: 0.05em;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
@@ -150,10 +151,11 @@ h2 {
     gap: 0.45rem;
     color: var(--swaply-navy);
     background: var(--swaply-white);
-    border: 1px solid var(--swaply-line);
+    border: 2px solid var(--swaply-navy);
     border-radius: 999px;
     padding: 0.72rem 1rem;
     font-weight: 800;
+    box-shadow: 3px 3px 0px var(--swaply-red);
 }
 
 .content-band {
@@ -164,9 +166,10 @@ h2 {
     height: 100%;
     min-width: 0;
     background: var(--swaply-white);
-    border: 1px solid var(--swaply-line);
-    border-radius: 8px;
+    border: 2px solid var(--swaply-navy);
+    border-radius: 16px;
     padding: clamp(1.6rem, 3vw, 2.25rem);
+    box-shadow: 4px 4px 0px var(--swaply-navy);
 }
 
 .profile-card h2 {
@@ -179,18 +182,18 @@ h2 {
 
 .profile-card h2 i,
 .timeline-item h3 i {
-    color: var(--swaply-red);
+    color: var(--swaply-red); /* Iconos principales en rosa orquídea */
 }
 
 .profile-card p i {
-    color: var(--swaply-blue);
+    color: var(--swaply-violet); /* Sub-iconos en lila eléctrico */
     margin-right: 0.35rem;
 }
 
 .profile-card p,
 .profile-card li,
 .timeline-item p {
-    color: var(--swaply-muted);
+    color: var(--swaply-ink);
     line-height: 1.85;
     overflow-wrap: anywhere;
     word-break: normal;
@@ -212,19 +215,19 @@ h2 {
 
 .contribution-band {
     background: var(--swaply-white);
-    border-top: 1px solid var(--swaply-line);
+    border-top: 2px solid var(--swaply-navy);
 }
 
 .tech-band {
     background: var(--swaply-white);
-    border-top: 1px solid var(--swaply-line);
-    border-bottom: 1px solid var(--swaply-line);
+    border-top: 2px solid var(--swaply-navy);
+    border-bottom: 2px solid var(--swaply-navy);
 }
 
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr));
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .tech-item {
@@ -233,10 +236,10 @@ h2 {
     place-items: center;
     gap: 0.75rem;
     padding: 1.25rem 1rem;
-    color: #8b91a7;
+    color: var(--swaply-muted);
     background: #ffffff;
-    border: 1px solid var(--swaply-line);
-    border-radius: 8px;
+    border: 2px solid var(--swaply-line);
+    border-radius: 16px;
     transition: color 180ms ease, transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
@@ -254,14 +257,14 @@ h2 {
 .tech-item:hover,
 .tech-item:focus-within {
     color: var(--tech-color);
-    border-color: color-mix(in srgb, var(--tech-color) 42%, var(--swaply-line));
-    box-shadow: 0 18px 40px rgba(7, 17, 63, 0.08);
-    transform: translateY(-4px);
+    border-color: var(--tech-color);
+    box-shadow: 4px 4px 0px var(--tech-color);
+    transform: translate(-2px, -2px);
 }
 
 .timeline {
     display: grid;
-    gap: 1.35rem;
+    gap: 1.5rem;
 }
 
 .timeline-item {
@@ -269,10 +272,11 @@ h2 {
     grid-template-columns: 18px 1fr;
     gap: 1.25rem;
     padding: clamp(1.5rem, 3vw, 2rem);
-    border: 1px solid var(--swaply-line);
-    border-radius: 8px;
+    border: 2px solid var(--swaply-navy);
+    border-radius: 16px;
     background: #ffffff;
     min-width: 0;
+    box-shadow: 4px 4px 0px var(--swaply-navy);
 }
 
 .timeline-item span {
@@ -280,7 +284,7 @@ h2 {
     height: 18px;
     margin-top: 0.25rem;
     border-radius: 999px;
-    background: linear-gradient(135deg, var(--swaply-red), var(--swaply-blue));
+    background: linear-gradient(135deg, var(--swaply-red), var(--swaply-violet));
 }
 
 .timeline-item h3 {
@@ -298,10 +302,11 @@ h2 {
 }
 
 .site-footer {
-    color: rgba(255, 255, 255, 0.78);
+    color: var(--swaply-white);
     background: var(--swaply-navy);
     padding: 1.5rem 0;
     font-weight: 700;
+    border-top: 2px solid var(--swaply-red);
 }
 
 @media (max-width: 991.98px) {
@@ -385,37 +390,37 @@ h2 {
 }
 
 body.tech-profile {
-    --tech-bg: #fff7ff;
-    --tech-panel: rgba(255, 255, 255, 0.72);
-    --tech-panel-strong: rgba(255, 250, 255, 0.92);
-    --tech-line: rgba(180, 139, 255, 0.3);
-    --tech-text: #3c2258;
-    --tech-muted: #765f8f;
-    --tech-accent: #b56dff;
-    --tech-accent-2: #e7a7ff;
-    --tech-accent-3: #ff9dcc;
-    --tech-soft: #f7dcff;
-    --tech-blush: #ffe1f0;
+    --tech-bg: #090514; /* Modo oscuro Cyber-Orquídea profundo */
+    --tech-panel: rgba(26, 18, 43, 0.75);
+    --tech-panel-strong: rgba(36, 26, 59, 0.9);
+    --tech-line: #d946ef; /* Neón rosa/lila como guía */
+    --tech-text: #fdf4ff;
+    --tech-muted: #9fa2dc;
+    --tech-accent: #f472b6; /* Rosa Neón brillante */
+    --tech-accent-2: #c084fc; /* Lila brillante */
+    --tech-accent-3: #06b6d4;
+    --tech-soft: #1e1135;
+    --tech-blush: #2d184c;
     color: var(--tech-text);
     background:
-        linear-gradient(rgba(181, 109, 255, 0.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(181, 109, 255, 0.055) 1px, transparent 1px),
-        radial-gradient(circle at 16% 10%, rgba(255, 157, 204, 0.34), transparent 28%),
-        radial-gradient(circle at 88% 16%, rgba(231, 167, 255, 0.38), transparent 30%),
-        radial-gradient(circle at 50% 92%, rgba(181, 109, 255, 0.22), transparent 34%),
-        linear-gradient(180deg, #fffaff 0%, #f7edff 48%, #fff7fc 100%),
+        linear-gradient(rgba(219, 70, 239, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(219, 70, 239, 0.04) 1px, transparent 1px),
+        radial-gradient(circle at 16% 10%, rgba(217, 70, 239, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 16%, rgba(168, 85, 247, 0.15), transparent 30%),
+        radial-gradient(circle at 50% 92%, rgba(6, 182, 212, 0.1), transparent 34%),
+        linear-gradient(180deg, #120b24 0%, #04020a 100%),
         var(--tech-bg);
-    background-size: 54px 54px, 54px 54px, auto, auto, auto, auto, auto;
+    background-size: 40px 40px, 40px 40px, auto, auto, auto, auto, auto;
 }
 
 body.tech-profile .swaply-navbar {
-    background: rgba(255, 250, 255, 0.82);
-    border-bottom-color: var(--tech-line);
-    box-shadow: 0 14px 40px rgba(121, 72, 164, 0.12);
+    background: rgba(9, 5, 20, 0.85);
+    border-bottom: 2px solid var(--tech-line);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
 }
 
 body.tech-profile .navbar-toggler {
-    filter: sepia(0.2) saturate(1.7) hue-rotate(225deg);
+    filter: invert(1) hue-rotate(280deg);
 }
 
 body.tech-profile .nav-link,
@@ -425,20 +430,21 @@ body.tech-profile .btn-swaply-outline {
 
 body.tech-profile .nav-link:hover,
 body.tech-profile .nav-link:focus {
-    color: #9d4edd;
+    color: var(--tech-accent);
 }
 
 body.tech-profile .btn-swaply-outline {
-    background: linear-gradient(135deg, rgba(247, 220, 255, 0.86), rgba(255, 225, 240, 0.88));
-    border-color: rgba(181, 109, 255, 0.36);
-    box-shadow: 0 12px 28px rgba(181, 109, 255, 0.12);
+    background: transparent;
+    border: 2px solid var(--tech-line);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.2);
 }
 
 body.tech-profile .btn-swaply-outline:hover,
 body.tech-profile .btn-swaply-outline:focus {
-    color: #ffffff;
-    background: linear-gradient(135deg, #b56dff, #ff9dcc);
-    border-color: rgba(181, 109, 255, 0.55);
+    color: #090514;
+    background: var(--tech-line);
+    border-color: var(--tech-line);
+    box-shadow: 0 0 25px rgba(217, 70, 239, 0.5);
 }
 
 body.tech-profile .profile-hero,
@@ -451,24 +457,25 @@ body.tech-profile .content-band {
 body.tech-profile .profile-hero {
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid var(--tech-line);
+    border-bottom: 2px solid var(--tech-line);
 }
 
 body.tech-profile .profile-hero::before {
-    content: "{ }";
+    content: "</>"; /* Cambiado aquí */
     position: absolute;
     right: clamp(1rem, 6vw, 5rem);
     bottom: 1rem;
-    color: rgba(181, 109, 255, 0.12);
-    font-size: clamp(5rem, 18vw, 15rem);
+    color: rgba(217, 70, 239, 0.05); /* Opacidad muy sutil para que sea fondo */
+    font-size: clamp(5rem, 15vw, 12rem); /* Ajustado ligeramente para texto */
     font-weight: 900;
     line-height: 1;
     pointer-events: none;
+    font-family: monospace; /* Fuente de código */
 }
 
 body.tech-profile .eyebrow {
     color: var(--tech-accent);
-    text-shadow: 0 0 18px rgba(231, 167, 255, 0.42);
+    text-shadow: 0 0 12px rgba(244, 114, 182, 0.6);
 }
 
 body.tech-profile h1,
@@ -478,7 +485,7 @@ body.tech-profile h3 {
 }
 
 body.tech-profile h1 {
-    text-shadow: 0 10px 34px rgba(181, 109, 255, 0.18);
+    text-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
 }
 
 body.tech-profile .hero-copy,
@@ -489,26 +496,27 @@ body.tech-profile .timeline-item p {
 }
 
 body.tech-profile .avatar-placeholder {
-    background: linear-gradient(135deg, var(--tech-accent), var(--tech-accent-2) 48%, var(--tech-accent-3));
-    border: 1px solid rgba(181, 109, 255, 0.34);
+    background: linear-gradient(135deg, var(--tech-accent-3), var(--tech-accent-2) 48%, var(--tech-accent));
+    border: 2px solid var(--tech-line);
     box-shadow:
-        0 0 0 8px rgba(255, 225, 240, 0.75),
-        0 28px 90px rgba(181, 109, 255, 0.2),
-        0 22px 70px rgba(255, 157, 204, 0.2);
+        0 0 0 8px rgba(26, 18, 43, 0.8),
+        0 0 50px rgba(217, 70, 239, 0.4);
+    border-radius: 24px;
 }
 
 body.tech-profile .avatar-placeholder img {
-    filter: contrast(1.02) saturate(1.08);
+    filter: saturate(1.2) contrast(1.05);
 }
 
 body.tech-profile .profile-chip,
 body.tech-profile .profile-card,
 body.tech-profile .timeline-item,
 body.tech-profile .tech-item {
-    background: linear-gradient(180deg, var(--tech-panel-strong), var(--tech-panel));
-    border-color: var(--tech-line);
-    box-shadow: 0 22px 60px rgba(121, 72, 164, 0.12);
+    background: var(--tech-panel);
+    border: 2px solid var(--tech-line);
+    box-shadow: 6px 6px 0px rgba(217, 70, 239, 0.3);
     backdrop-filter: blur(14px);
+    border-radius: 16px;
 }
 
 body.tech-profile .profile-chip {
@@ -519,7 +527,8 @@ body.tech-profile .profile-chip i,
 body.tech-profile .profile-card h2 i,
 body.tech-profile .timeline-item h3 i,
 body.tech-profile .profile-card p i {
-    color: #c06dff;
+    color: var(--tech-accent);
+    filter: drop-shadow(0 0 8px var(--tech-accent));
 }
 
 body.tech-profile .profile-card {
@@ -534,7 +543,7 @@ body.tech-profile .timeline-item::before {
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
-    background: linear-gradient(135deg, rgba(255, 157, 204, 0.2), transparent 32%, rgba(181, 109, 255, 0.16));
+    background: linear-gradient(135deg, rgba(244, 114, 182, 0.1), transparent 32%, rgba(6, 182, 212, 0.1));
     opacity: 0;
     transition: opacity 180ms ease;
 }
@@ -545,7 +554,7 @@ body.tech-profile .timeline-item:hover::before {
 }
 
 body.tech-profile .profile-card a {
-    color: #9d4edd;
+    color: var(--tech-accent-2);
     font-weight: 800;
 }
 
@@ -555,7 +564,7 @@ body.tech-profile .tech-band {
 }
 
 body.tech-profile .tech-item {
-    color: #a88bc4;
+    color: var(--tech-muted);
     min-height: 148px;
 }
 
@@ -565,11 +574,10 @@ body.tech-profile .tech-item span {
 
 body.tech-profile .tech-item:hover,
 body.tech-profile .tech-item:focus-within {
-    color: var(--tech-color);
-    border-color: var(--tech-color);
-    box-shadow:
-        0 0 0 1px color-mix(in srgb, var(--tech-color) 42%, transparent),
-        0 20px 55px rgba(181, 109, 255, 0.16);
+    color: var(--tech-accent);
+    border-color: var(--tech-accent);
+    box-shadow: 0 0 25px rgba(244, 114, 182, 0.4);
+    transform: scale(1.02);
 }
 
 body.tech-profile .timeline-item {
@@ -578,11 +586,11 @@ body.tech-profile .timeline-item {
 
 body.tech-profile .timeline-item span {
     background: linear-gradient(135deg, var(--tech-accent), var(--tech-accent-2));
-    box-shadow: 0 0 18px rgba(231, 167, 255, 0.46);
+    box-shadow: 0 0 12px var(--tech-accent);
 }
 
 body.tech-profile .site-footer {
-    color: var(--tech-text);
-    background: linear-gradient(135deg, rgba(247, 220, 255, 0.92), rgba(255, 225, 240, 0.9));
-    border-top: 1px solid var(--tech-line);
+    color: var(--tech-muted);
+    background: #040209;
+    border-top: 2px solid var(--tech-line);
 }
