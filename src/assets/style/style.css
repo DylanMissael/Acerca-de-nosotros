@@ -530,7 +530,7 @@ h2 {
 .site-footer {
     color: rgba(255, 255, 255, 0.78);
     background: var(--swaply-navy);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-weight: 700;
 }
 
