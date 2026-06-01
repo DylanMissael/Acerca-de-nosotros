@@ -671,3 +671,45 @@ textarea.form-control {
     min-height: 120px;
     resize: vertical;
 }
+
+
+
+
+/* ==========================================================================
+   Ajustes de Soporte para Imágenes en Tarjetas (Explorar)
+   ========================================================================== */
+.carousel-item .row {
+    padding: 5px;
+}
+
+/* Evita que las imágenes se estiren feo y mantiene el fondo limpio */
+.info-card img {
+    mix-blend-mode: multiply; /* Fusiona los fondos blancos de internet perfectamente */
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover img {
+    transform: scale(1.05); /* Sutil efecto dinámico al pasar el mouse */
+}
+
+/* Ajustes de control redondeado para los botones del carrusel */
+.rounded-circle {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optimización táctil para dispositivos móviles */
+@media (max-width: 767px) {
+    .carousel-item .row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .carousel-item .col-md-4 {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+    }
+}

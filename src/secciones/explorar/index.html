@@ -1,11 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/style/style.css">
+    <title>Swaply | Explorar</title>
 </head>
+
 <body>
-    hola desde explorar
+    <!-- NAVBAR (Consistente con tus páginas claras) -->
+    <nav class="navbar navbar-expand-lg fixed-top swaply-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="../home/index.html">
+                <img src="../../assets/img/swaply.png" alt="Swaply" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="../home/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page">Explorar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../home/index.html#como-funciona">Cómo funciona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about-us/index.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contacto/index.html">Contacto</a></li>
+                    <li class="nav-item"><a class="btn btn-swaply-primary ms-lg-2" href="../login/index.html">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION (Estructura idéntica a Inicio y Contacto) -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="eyebrow">Catálogo de la comunidad</p>
+                        <h1>Explorar Artículos</h1>
+                        <p class="hero-copy">
+                            Echa un vistazo a lo que los coleccionistas de la plataforma están ofreciendo. 
+                            Filtra por tus categorías favoritas, revisa qué piezas les faltan y prepárate 
+                            para hacer un intercambio perfecto.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3">
+                            <a href="#funkos" class="btn btn-swaply-primary">
+                                <i class="bi bi-arrow-down-circle"></i> Empezar a explorar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="logo-showcase text-center">
+                            <i class="bi bi-compass" style="font-size: clamp(5rem, 14vw, 9rem); color: #305BAA;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: CARRUSEL FUNKOS -->
+        <section id="funkos" class="content-band">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <p class="eyebrow">Figuras de colección</p>
+                        <h2>Funkos Disponibles</h2>
+                    </div>
+                    <!-- Botones de navegación del carrusel -->
+                    <div class="gap-2 d-none d-sm-flex">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle" type="button" data-bs-target="#carouselFunkos" data-bs-slide="prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle" type="button" data-bs-target="#carouselFunkos" data-bs-slide="next">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="carouselFunkos" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <!-- Bloque 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://images.stockx.com/images/Funko-Pop-DC-Comics-Batman-Metallic-Silver-Figure-01.jpg?fit=fill&bg=FFFFFF&w=480&h=320&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606948418&q=60" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Batman Funko">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark red"></span>
+                                            <h3>Batman Metálico #01</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @Carlos_ISC</p>
+                                            <p class="text-muted small mb-0">Busca: Funkos de Star Wars o Marvel.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://http2.mlstatic.com/D_NQ_NP_967320-MLM53609846781_022023-O.webp" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Iron Man Funko">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark red"></span>
+                                            <h3>Iron Man Gauntlet</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @Esteban_N</p>
+                                            <p class="text-muted small mb-0">Busca: Ediciones Chase comunes.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1712663916-81PMR6277PL.jpg?crop=1xw:1.00xh;center,top&resize=980:*" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Spider-Man Funko">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark red"></span>
+                                            <h3>Spider-Man Special</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @DylanM</p>
+                                            <p class="text-muted small mb-0">Busca: Funkos de Anime (Naruto).</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bloque 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://tse2.mm.bing.net/th/id/OIP.rprJmWgd2vo1bCPw-uFN1AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Goku Funko">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark red"></span>
+                                            <h3>Goku Ultra Instinto</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @GamerX</p>
+                                            <p class="text-muted small mb-0">Busca: Figuras de Dragon Ball Z.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CARRUSEL CARTAS TCG -->
+        <section id="cartas" class="content-band identity-band">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <p class="eyebrow">Trading Card Games</p>
+                        <h2>Cartas y TCG</h2>
+                    </div>
+                    <div class="gap-2 d-none d-sm-flex">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle" type="button" data-bs-target="#carouselCartas" data-bs-slide="prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle" type="button" data-bs-target="#carouselCartas" data-bs-slide="next">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="carouselCartas" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-white rounded p-3 border">
+                                            <img src="https://tse3.mm.bing.net/th/id/OIP.F4fc82rWSGy5ehkwya_tOAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Carta Pokemon">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark violet"></span>
+                                            <h3>Charizard VMAX Shiny</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @PikaMaster</p>
+                                            <p class="text-muted small mb-0">Busca: Umbreon Gold Star.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-white rounded p-3 border">
+                                            <img src="https://tse1.mm.bing.net/th/id/OIP.kyrwJ_1tqdtsAssw78CqqgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Carta Yugioh">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark violet"></span>
+                                            <h3>Mago Oscuro (Yugi-Oh)</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @KaibaCorp</p>
+                                            <p class="text-muted small mb-0">Busca: Dragón Blanco Ojos Azules.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-white rounded p-3 border">
+                                            <img src="https://http2.mlstatic.com/D_NQ_NP_626887-MLA82236674753_022025-O.webp" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Carta MTG">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark violet"></span>
+                                            <h3>Black Lotus (Proxy MTG)</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @MagicPlanes</p>
+                                            <p class="text-muted small mb-0">Busca: Tierras raras de Magic.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Bloque 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-white rounded p-3 border">
+                                            <img src="https://tse3.mm.bing.net/th/id/OIP.F4fc82rWSGy5ehkwya_tOAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Carta Pokemon">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark violet"></span>
+                                            <h3>Charizard VMAX Shiny</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @PikaMaster</p>
+                                            <p class="text-muted small mb-0">Busca: Umbreon Gold Star.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-white rounded p-3 border">
+                                            <img src="https://tse1.mm.bing.net/th/id/OIP.kyrwJ_1tqdtsAssw78CqqgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Carta Yugioh">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark violet"></span>
+                                            <h3>Mago Oscuro (Yugi-Oh)</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @KaibaCorp</p>
+                                            <p class="text-muted small mb-0">Busca: Dragón Blanco Ojos Azules.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-white rounded p-3 border">
+                                            <img src="https://http2.mlstatic.com/D_NQ_NP_626887-MLA82236674753_022025-O.webp" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Carta MTG">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark violet"></span>
+                                            <h3>Black Lotus (Proxy MTG)</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @MagicPlanes</p>
+                                            <p class="text-muted small mb-0">Busca: Tierras raras de Magic.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CARRUSEL STICKERS DEL MUNDIAL -->
+        <section id="stickers" class="content-band">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <p class="eyebrow">Álbumes y estampitas</p>
+                        <h2>Stickers del Mundial</h2>
+                    </div>
+                    <div class="gap-2 d-none d-sm-flex">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle" type="button" data-bs-target="#carouselStickers" data-bs-slide="prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle" type="button" data-bs-target="#carouselStickers" data-bs-slide="next">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="carouselStickers" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://canal12web.com/wp-content/uploads/2026/03/asi-sera-la-figurita-de-messi-en-el-album-del-mundial-2026_w862.webp" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Sticker Messi">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark navy"></span>
+                                            <h3>Lionel Messi (Legendario)</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @MundoFifas</p>
+                                            <p class="text-muted small mb-0">Busca: Cristiano Ronaldo Extra.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://emprendedor.com/wp-content/uploads/2025/12/panini-album.jpg" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Escudo Mexico">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark navy"></span>
+                                            <h3>Escudo de México (FMF)</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @TriColeccion</p>
+                                            <p class="text-muted small mb-0">Busca: Escudo de Brasil.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="info-card h-100 d-flex flex-column justify-content-between">
+                                        <div class="text-center mb-3 bg-light rounded p-3">
+                                            <img src="https://http2.mlstatic.com/D_NQ_NP_738143-MLM70614316088_072023-O.webp" class="img-fluid object-fit-contain" style="max-height: 180px;" alt="Sticker Mbappe">
+                                        </div>
+                                        <div>
+                                            <span class="card-mark navy"></span>
+                                            <h3>Kylian Mbappé #FRA10</h3>
+                                            <p class="mb-2 text-secondary small"><strong>Coleccionista:</strong> @PSG_Collector</p>
+                                            <p class="text-muted small mb-0">Busca: Bloque de Francia.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Idéntico a tu plantilla original) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-3 mb-4">
+                    <p><i class="bi bi-telephone-fill"></i> 12345678</p>
+                    <p><i class="bi bi-envelope-fill"></i> swaply@gmail.com</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../home/index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="../about-us/index.html" class="text-white text-decoration-none">Acerca de</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">Redes Sociales</h5>
+                    <div class="d-flex justify-content-center gap-4 fs-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
