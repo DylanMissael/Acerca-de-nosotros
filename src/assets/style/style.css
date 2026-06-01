@@ -633,3 +633,41 @@ h2 {
         min-height: auto;
     }
 }
+/* Estilos de la sección de contacto */
+.form-control {
+    border: 1px solid var(--swaply-line);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    color: var(--swaply-ink);
+    background: var(--swaply-white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--swaply-red);
+    box-shadow: 0 0 0 3px rgba(255, 23, 72, 0.12);
+    outline: 0;
+}
+
+.form-control::placeholder {
+    color: var(--swaply-muted);
+    opacity: 0.7;
+}
+
+select.form-control {
+    appearance: auto;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--swaply-navy);
+    margin-bottom: 0.45rem;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
