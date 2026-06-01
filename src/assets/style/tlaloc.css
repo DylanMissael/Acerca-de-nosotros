@@ -12,6 +12,8 @@
 }
 
 :root {
+    /* PALETA DEL PERFIL TLALOC:
+       Cambia estos valores para modificar los colores principales de esta pagina. */
     --swaply-red: #2563eb;
     --swaply-violet: #059669;
     --swaply-blue: #3b82f6;
@@ -405,6 +407,8 @@ h2 {
 }
 
 body.tech-profile {
+    /* PALETA DE LA SECCION TECH:
+       Estas variables solo afectan el bloque con clase .tech-profile. */
     --tech-bg: #f0f7ff;
     --tech-panel: rgba(255, 255, 255, 0.72);
     --tech-panel-strong: rgba(255, 255, 255, 0.92);

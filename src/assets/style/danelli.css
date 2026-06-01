@@ -1,4 +1,6 @@
 ﻿:root {
+    /* PALETA DEL PERFIL DANELLI:
+       Cambia estos valores para modificar los colores principales de esta pagina. */
     --swaply-red: #d946ef; /* Rosa Orquídea vibrante (para iconos y destaques) */
     --swaply-violet: #a855f7; /* Lila Eléctrico premium */
     --swaply-blue: #06b6d4; /* Turquesa / Cian pop */
@@ -390,6 +392,8 @@ h2 {
 }
 
 body.tech-profile {
+    /* PALETA DE LA SECCION TECH:
+       Estas variables solo afectan el bloque con clase .tech-profile. */
     --tech-bg: #090514; /* Modo oscuro Cyber-Orquídea profundo */
     --tech-panel: rgba(26, 18, 43, 0.75);
     --tech-panel-strong: rgba(36, 26, 59, 0.9);

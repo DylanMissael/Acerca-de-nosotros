@@ -1,4 +1,6 @@
 ﻿:root {
+    /* PALETA DEL PERFIL MISSAEL:
+       Cambia estos valores para modificar los colores principales de esta pagina. */
     /* Paleta modificada para inyectar más verde al fondo general */
     --swaply-green-neon: #00ff66;
     --swaply-green-dark: #00220a;       /* Verde bosque muy oscuro para el fondo base */
@@ -320,6 +322,8 @@ h2 {
 
 /* --- REGLAS DE LA CLASE ESPECÍFICA .tech-profile REESCRITAS PARA MÁS VERDE --- */
 body.tech-profile {
+    /* PALETA DE LA SECCION TECH:
+       Estas variables solo afectan el bloque con clase .tech-profile. */
     --tech-bg: var(--swaply-black-pure);
     --tech-panel: var(--swaply-dark-gray);
     --tech-panel-strong: #102e19;       /* Un verde oscuro sólido para realzar componentes */

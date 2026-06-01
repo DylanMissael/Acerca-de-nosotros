@@ -1,19 +1,23 @@
-
+/* Referencias a los tabs que cambian entre login y registro. */
 const loginTab = document.getElementById("loginTab");
 const registerTab = document.getElementById("registerTab");
 
+/* Textos principales del formulario que cambian segun el modo activo. */
 const formTitle = document.getElementById("formTitle");
 const formSubtitle = document.getElementById("formSubtitle");
 const emoji = document.getElementById("emoji");
 
+/* Elementos que se muestran u ocultan segun sea login o registro. */
 const usernameField = document.getElementById("usernameField");
 const forgotPassword = document.getElementById("forgotPassword");
 const terms = document.getElementById("terms");
 
+/* Controles de envio y enlace inferior para alternar de modo. */
 const submitBtn = document.getElementById("submitBtn");
 const switchText = document.getElementById("switchText");
 const switchMode = document.getElementById("switchMode");
 
+/* Formulario, mensaje de validacion y campos de entrada. */
 const authForm = document.getElementById("authForm");
 const message = document.getElementById("message");
 
@@ -21,13 +25,17 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const usernameInput = document.getElementById("username");
 
+/* Icono que permite mostrar u ocultar la contrasena. */
 const togglePassword = document.getElementById("togglePassword");
 
+/* Estado actual del formulario: puede ser "login" o "register". */
 let mode = "login";
 
+/* Cambia el formulario entre iniciar sesion y crear cuenta. */
 function setMode(newMode){
     mode = newMode;
 
+    /* Limpia mensajes y campos para evitar mezclar estados anteriores. */
     message.textContent = "";
     message.className = "message";
 
@@ -68,6 +76,7 @@ function setMode(newMode){
     }
 }
 
+/* Click directo en los tabs superiores. */
 loginTab.addEventListener("click", () => {
     setMode("login");
 });
@@ -76,6 +85,7 @@ registerTab.addEventListener("click", () => {
     setMode("register");
 });
 
+/* Click en el enlace inferior para alternar al modo contrario. */
 switchMode.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -86,6 +96,7 @@ switchMode.addEventListener("click", (event) => {
     }
 });
 
+/* Alterna el tipo del input para ver u ocultar la contrasena. */
 togglePassword.addEventListener("click", () => {
     if(passwordInput.type === "password"){
         passwordInput.type = "text";
@@ -100,6 +111,7 @@ togglePassword.addEventListener("click", () => {
     }
 });
 
+/* Valida el formulario en el navegador; no envia datos a un servidor. */
 authForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -141,11 +153,13 @@ authForm.addEventListener("submit", (event) => {
     }
 });
 
+/* Muestra un mensaje debajo del formulario y aplica el color segun el tipo. */
 function showMessage(text, type){
     message.textContent = text;
     message.classList.add(type);
 }
 
+/* Valida que el correo tenga formato basico usuario@dominio.extension. */
 function isValidEmail(email){
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
