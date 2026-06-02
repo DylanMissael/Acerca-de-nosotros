@@ -231,6 +231,7 @@ body {
     filter: blur(35px);
     opacity: 0;
     transition: 0.4s ease;
+    pointer-events: none;
 }
 
 .profile-card:hover::before {
