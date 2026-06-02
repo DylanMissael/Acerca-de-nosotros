@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: 'Aeiou';
     src: url('../fonts/_aeiou2U.ttf') format('truetype');
     font-weight: normal;
@@ -9,6 +9,9 @@
     font-family: 'Aeiou', serif;
 }
 
+/* PALETA GLOBAL:
+   Aqui se definen los colores principales de Swaply.
+   Para cambiar la paleta en las paginas que usan este CSS, modifica estos valores. */
 :root {
     --swaply-red: #ff1748;
     --swaply-violet: #7a2ee6;
@@ -21,6 +24,7 @@
     --swaply-white: #ffffff;
 }
 
+/* Reset base y comportamiento general de la pagina. */
 * {
     box-sizing: border-box;
 }
@@ -37,10 +41,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Ajuste global para que las imagenes no excedan su contenedor. */
 img {
     max-width: 100%;
 }
 
+/* Navegacion principal compartida por las secciones del sitio. */
 .swaply-navbar {
     background: rgba(255, 255, 255, 0.94);
     border-bottom: 1px solid var(--swaply-line);
@@ -58,6 +64,7 @@ img {
     object-position: left center;
 }
 
+/* Enlaces del menu superior. */
 .nav-link {
     display: inline-flex;
     align-items: center;
@@ -71,6 +78,7 @@ img {
     color: var(--swaply-red);
 }
 
+/* Botones reutilizables: primario con gradiente y secundario con borde. */
 .btn-swaply-primary,
 .btn-swaply-outline {
     display: inline-flex;
@@ -107,6 +115,7 @@ img {
     border-color: rgba(255, 23, 72, 0.34);
 }
 
+/* Hero principal de home y cabecera de la pagina de desarrolladores. */
 .hero-section {
     min-height: 92vh;
     display: flex;
@@ -118,6 +127,7 @@ img {
         linear-gradient(180deg, #ffffff 0%, var(--swaply-bg) 100%);
 }
 
+/* Cabecera especifica de la pagina de desarrolladores. */
 .developers-hero {
     padding: 8.5rem 0 5.5rem;
     background:
@@ -126,6 +136,7 @@ img {
         linear-gradient(180deg, #ffffff 0%, var(--swaply-bg) 100%);
 }
 
+/* Ajustes especificos del hero de desarrolladores. */
 .developers-hero .row {
     --bs-gutter-x: clamp(3rem, 7vw, 6rem);
 }
@@ -153,6 +164,7 @@ img {
     max-width: 420px;
 }
 
+/* Etiqueta pequena de categoria usada en heroes y tarjetas. */
 .eyebrow {
     color: var(--swaply-red);
     font-size: 0.78rem;
@@ -162,6 +174,7 @@ img {
     text-transform: uppercase;
 }
 
+/* Tipografia base para titulos y textos introductorios. */
 h1,
 h2,
 h3,
@@ -194,6 +207,7 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* Tarjeta que muestra el logotipo o imagen principal en secciones informativas. */
 .logo-showcase {
     display: grid;
     min-height: 330px;
@@ -205,16 +219,19 @@ h2 {
     box-shadow: 0 30px 70px rgba(7, 17, 63, 0.08);
 }
 
+/* Bandas de contenido reutilizadas en about-us, home y contacto. */
 .content-band {
     padding: clamp(5rem, 9vw, 8rem) 0;
 }
 
+/* Banda de identidad visual con fondo blanco y separadores. */
 .identity-band {
     background: var(--swaply-white);
     border-top: 1px solid var(--swaply-line);
     border-bottom: 1px solid var(--swaply-line);
 }
 
+/* Tarjetas informativas y tarjetas de paleta de la identidad visual. */
 .info-card,
 .palette-card {
     height: 100%;
@@ -231,6 +248,7 @@ h2 {
     margin: 1.35rem 0 0.75rem;
 }
 
+/* Iconos de apoyo dentro de tarjetas y bloques de declaracion. */
 .card-icon,
 .statement-icon {
     display: inline-grid;
@@ -270,6 +288,7 @@ h2 {
     margin-bottom: 0;
 }
 
+/* Marcas de color usadas como acentos en las tarjetas. */
 .card-mark {
     display: block;
     width: 46px;
@@ -293,6 +312,7 @@ h2 {
     background: var(--swaply-navy);
 }
 
+/* Tarjetas que explican la paleta; los swatches toman color de las variables globales. */
 .palette-card {
     display: flex;
     align-items: center;
@@ -326,6 +346,7 @@ h2 {
     background: var(--swaply-navy);
 }
 
+/* Enlaces grandes hacia perfiles o paginas internas de desarrolladores. */
 .profile-link-card {
     display: flex;
     min-height: 160px;
@@ -350,6 +371,7 @@ h2 {
     line-height: 1.05;
 }
 
+/* Texto largo de contenido editorial. */
 .body-copy {
     color: var(--swaply-muted);
     font-size: 1.05rem;
@@ -357,6 +379,7 @@ h2 {
     margin-bottom: 1.25rem;
 }
 
+/* Tarjetas para publico objetivo, mensajes, modelo y resumen de valor. */
 .target-card,
 .statement-card,
 .model-card,
@@ -384,6 +407,7 @@ h2 {
     margin-bottom: 0;
 }
 
+/* Variante oscura para declaraciones destacadas. */
 .statement-card h2 {
     font-size: clamp(1.7rem, 4vw, 2.7rem);
     margin-bottom: 1.25rem;
@@ -404,6 +428,7 @@ h2 {
     color: #ffb5c4;
 }
 
+/* Grid de valores de marca y sus pildoras individuales. */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -446,6 +471,7 @@ h2 {
     margin-top: 1.25rem;
 }
 
+/* Seccion visual para explicar la propuesta de valor. */
 .value-section {
     background:
         radial-gradient(circle at 18% 24%, rgba(255, 23, 72, 0.12), transparent 28%),
@@ -473,6 +499,7 @@ h2 {
     line-height: 1.1;
 }
 
+/* Cards del listado de integrantes/desarrolladores. */
 .developer-card {
     display: grid;
     height: 100%;
@@ -527,13 +554,15 @@ h2 {
     align-self: end;
 }
 
+/* Footer compartido del sitio. */
 .site-footer {
     color: rgba(255, 255, 255, 0.78);
     background: var(--swaply-navy);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-weight: 700;
 }
 
+/* Ajustes responsivos para tablet: menu, hero y grid de valores. */
 @media (max-width: 991.98px) {
     .swaply-navbar .btn {
         width: 100%;
@@ -563,6 +592,7 @@ h2 {
     }
 }
 
+/* Ajustes responsivos para mobile: titulos, espaciados y tarjetas. */
 @media (max-width: 767.98px) {
     .hero-section,
     .developers-hero {
@@ -603,6 +633,7 @@ h2 {
     font-size: 1.7rem;
 }
 
+/* Ajustes responsivos para pantallas pequenas. */
 @media (max-width: 575.98px) {
     .brand-logo {
         width: 132px;
@@ -631,5 +662,84 @@ h2 {
 
     .value-pill {
         min-height: auto;
+    }
+}
+
+/* Seccion contacto: campos, etiquetas, select y textarea del formulario. */
+.form-control {
+    border: 1px solid var(--swaply-line);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    color: var(--swaply-ink);
+    background: var(--swaply-white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--swaply-red);
+    box-shadow: 0 0 0 3px rgba(255, 23, 72, 0.12);
+    outline: 0;
+}
+
+.form-control::placeholder {
+    color: var(--swaply-muted);
+    opacity: 0.7;
+}
+
+select.form-control {
+    appearance: auto;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--swaply-navy);
+    margin-bottom: 0.45rem;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+
+
+/* Seccion explorar: soporte para imagenes y carrusel de tarjetas. */
+.carousel-item .row {
+    padding: 5px;
+}
+
+/* Evita que las imagenes se vean con fondo blanco duro dentro de las tarjetas. */
+.info-card img {
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Controles redondos del carrusel. */
+.rounded-circle {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Explorar en mobile: carrusel horizontal desplazable con anclaje por tarjeta. */
+@media (max-width: 767px) {
+    .carousel-item .row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .carousel-item .col-md-4 {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
     }
 }

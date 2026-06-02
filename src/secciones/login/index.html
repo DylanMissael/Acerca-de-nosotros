@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaply Login</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+        <div class="overlay"></div>
+
+        <div class="left-content">
+
+            <div class="brand">
+                <img
+                    src="../../assets/img/swaply.png"
+                    alt="Swaply"
+                    class="logo-swaply">
+            </div>
+
+            <div class="hero-text">
+                <h1>
+                    Colecciona.<br>
+                    <span class="red">Intercambia.</span><br>
+                    <span class="blue">Conecta.</span>
+                </h1>
+
+                <p>
+                    Encuentra coleccionistas con tu misma pasión
+                    y consigue las piezas que te faltan.
+                </p>
+            </div>
+
+            <div class="stats-card">
+                <div>
+                    <strong>12K+</strong>
+                    <span>Coleccionistas activos</span>
+                </div>
+
+                <div>
+                    <strong>45K+</strong>
+                    <span>Artículos publicados</span>
+                </div>
+
+                <div>
+                    <strong>8K+</strong>
+                    <span>Intercambios realizados</span>
+                </div>
+            </div>
+
+            <p class="community-text">
+                Conecta con personas de todo el mundo
+            </p>
+
+        </div>
+    </div>
+
+    <div class="right-panel">
+
+        <div class="login-card">
+
+            <div class="tabs">
+                <button class="tab-btn active" id="loginTab">
+                    Iniciar sesión
+                </button>
+
+                <button class="tab-btn" id="registerTab">
+                    Crear cuenta
+                </button>
+            </div>
+
+            <div class="header">
+                <div>
+                    <h1 id="formTitle">
+                        Bienvenido de nuevo
+                    </h1>
+
+                    <p id="formSubtitle">
+                        Inicia sesión y vuelve a tu colección.
+                    </p>
+                </div>
+            </div>
+
+            <form id="authForm">
+
+                <div class="username-field" id="usernameField">
+                    <label>Nombre de usuario</label>
+
+                    <div class="input-group">
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="swaply_user">
+                    </div>
+                </div>
+
+                <label>Correo electrónico</label>
+
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="ejemplo@correo.com">
+                </div>
+
+                <label>Contraseña</label>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••">
+
+                    <i
+                        class="fa-regular fa-eye eye-icon"
+                        id="togglePassword"></i>
+                </div>
+
+                <div class="forgot" id="forgotPassword">
+                    ¿Olvidaste tu contraseña?
+                </div>
+
+                <p class="terms" id="terms">
+                    Al crear tu cuenta aceptas los términos de Swaply
+                    y nuestra política de privacidad.
+                </p>
+
+                <p class="message" id="message"></p>
+
+                <button class="login-btn" id="submitBtn">
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span></span>
+                <p>o continúa con</p>
+                <span></span>
+            </div>
+
+            <div class="social-buttons">
+                <button>
+                    Google
+                </button>
+
+                <button>
+                    Apple
+                </button>
+            </div>
+
+            <div class="register">
+                <span id="switchText">
+                    ¿No tienes cuenta?
+                </span>
+
+                <a href="#" id="switchMode">
+                    Crear cuenta
+                </a>
+            </div>
+
+            <div class="features">
+                <div>🔒 Seguro</div>
+                <div>🛡 Datos protegidos</div>
+                <div>🌎 Comunidad global</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

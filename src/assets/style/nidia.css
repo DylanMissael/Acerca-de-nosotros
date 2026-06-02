@@ -1,4 +1,6 @@
 :root {
+    /* PALETA DEL PERFIL NIDIA:
+       Cambia estos valores para modificar los colores principales de esta pagina. */
     --nidia-forest: #45694f;
     --nidia-sage: #8fae8b;
     --nidia-mint: #dcebd5;
@@ -263,7 +265,7 @@ h2 {
     margin-bottom: 0;
 }
 
-.profile-card li + li {
+.profile-card li+li {
     margin-top: 0.5rem;
 }
 
